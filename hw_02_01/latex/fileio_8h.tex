@@ -1,0 +1,44 @@
+\hypertarget{fileio_8h}{}\doxysection{Файл fileio.\+h}
+\label{fileio_8h}\index{fileio.h@{fileio.h}}
+
+
+Заголовочный файл с функциями для работы с текстовым файлом целых чисел  
+
+
+Граф файлов, в которые включается этот файл\+:
+% FIG 0
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fileio_8h_a4c287b40ab468d4131e5c59373430408}{read\+\_\+array}} (F\+I\+LE $\ast$const f, uint32\+\_\+t $\ast$numbers, size\+\_\+t $\ast$const length)
+\begin{DoxyCompactList}\small\item\em Функция для считывания массива целых чисел из текстового файла \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с функциями для работы с текстовым файлом целых чисел 
+
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{fileio_8h_a4c287b40ab468d4131e5c59373430408}\label{fileio_8h_a4c287b40ab468d4131e5c59373430408}} 
+\index{fileio.h@{fileio.h}!read\_array@{read\_array}}
+\index{read\_array@{read\_array}!fileio.h@{fileio.h}}
+\doxysubsubsection{\texorpdfstring{read\_array()}{read\_array()}}
+{\footnotesize\ttfamily int read\+\_\+array (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$const}]{f,  }\item[{uint32\+\_\+t $\ast$}]{numbers,  }\item[{size\+\_\+t $\ast$const}]{length }\end{DoxyParamCaption})}
+
+
+
+Функция для считывания массива целых чисел из текстового файла 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em f} & Файловая переменная (текстовый файл) \\
+\hline
+\mbox{\texttt{ out}}  & {\em numbers} & Массив целых беззнаковых чисел \\
+\hline
+\mbox{\texttt{ out}}  & {\em length} & Количество элементов массива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Код возврата (0 -\/ успех, E\+R\+R\+\_\+\+D\+A\+TA -\/ ошибка) 
+\end{DoxyReturn}

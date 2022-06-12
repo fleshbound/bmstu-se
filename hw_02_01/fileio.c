@@ -1,3 +1,7 @@
+/**
+ * \file
+ * \brief Файл с описанием функций для работы с входным файлом целых чисел
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -9,9 +13,18 @@
 #define READ_COUNT 1
 #define MAX_COUNT 100
 
+/**
+ * \brief Функция для считывания массива целых чисел из текстового файла
+ * \param[in] f Файловая переменная (текстовый файл)
+ * \param[out] numbers Массив целых беззнаковых чисел
+ * \param[out] length Количество элементов массива
+ * \returns Код возврата (0 - успех, ERR_DATA - ошибка)
+ */
 int read_array(FILE *const f, uint32_t *numbers, size_t *const length)
 {
     assert(f != NULL);
+    
+    fseek(f, 0, SEEK_SET);
 
     size_t curr_len = 0;
     uint32_t num;
@@ -23,6 +36,7 @@ int read_array(FILE *const f, uint32_t *numbers, size_t *const length)
         if (curr_len > MAX_COUNT)
         {
             fprintf(stderr, "Отсутствуют числа\n");
+            *length = 0;
 
             return ERR_DATA;
         }
@@ -36,8 +50,11 @@ int read_array(FILE *const f, uint32_t *numbers, size_t *const length)
 
     *length = curr_len;
 
-    if (*length == 0)
+    if ((*length == 0) || (!feof(f)))
     {
+        if (!feof(f))
+            *length = 0;
+
         fprintf(stderr, "Отсутствуют числа\n");
 
         return ERR_DATA;

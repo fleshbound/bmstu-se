@@ -1,3 +1,15 @@
+/**
+ * \mainpage
+ * # Домашнее задание по ОПИ (часть 2)
+ * ## Студент: Авдейкина Валерия (ИУ7-23Б)
+ *
+ * В данной документации описано решение домашнего задания (вариант 1)
+ */
+
+/**
+ * \file
+ * \brief Основной файл с решением задачи
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -9,6 +21,12 @@
 
 #define MAX_COUNT 100
 
+/**
+ * \brief Функция проверки файловой переменной
+ *
+ * \param[in] f Файловая переменная
+ * \returns Код возврата (0 - успех, ERR_IO - ошибка)
+ */
 int check_file(FILE *const f)
 {
     if (f == NULL)
@@ -23,6 +41,12 @@ int check_file(FILE *const f)
     return EXIT_SUCCESS;
 }
 
+/**
+ * \brief Функция проверки количества аргументов командной строки
+ *
+ * \param[in] argc Количество аргументов командной строки
+ * \returns Код возврата (0 - успех, ERR_ARGC - неудача)
+ */
 int check_argc(const int argc)
 {
     if (argc != EXPECTED_ARGC)
@@ -64,7 +88,7 @@ int main(int argc, char *argv[])
 
     get_palindrome_flags(numbers, length, flags);
     
-    err_code = print_palindromes(numbers, length, flags);
+    err_code = print_palindromes(stdout, stderr, numbers, length, flags);
 
     if (err_code)
         return err_code;

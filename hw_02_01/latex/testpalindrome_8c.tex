@@ -1,0 +1,85 @@
+\hypertarget{testpalindrome_8c}{}\doxysection{Файл testpalindrome.\+c}
+\label{testpalindrome_8c}\index{testpalindrome.c@{testpalindrome.c}}
+
+
+Файл с модульным тестированием \mbox{\hyperlink{palindrome_8c}{palindrome.\+c}}.  
+
+
+{\ttfamily \#include $<$C\+Unit/\+C\+Unit.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}C\+Unit/\+Basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}palindrome.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для testpalindrome.\+c\+:
+% FIG 0
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{testpalindrome_8c_ae2d725d3e315394bfc60f8741d226c5f}\label{testpalindrome_8c_ae2d725d3e315394bfc60f8741d226c5f}} 
+\#define {\bfseries F\+I\+L\+E\+\_\+\+S\+T\+R\+\_\+\+L\+EN}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{testpalindrome_8c_aac466d5046e1b15be3ac9250e7481a93}\label{testpalindrome_8c_aac466d5046e1b15be3ac9250e7481a93}} 
+int \mbox{\hyperlink{testpalindrome_8c_aac466d5046e1b15be3ac9250e7481a93}{init\+\_\+suite\+\_\+print\+\_\+palindromes}} (void)
+\begin{DoxyCompactList}\small\item\em Функция для инициализации Suite функции print\+\_\+palindromes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_aff6b4a023a3e175730aa782a589884ce}\label{testpalindrome_8c_aff6b4a023a3e175730aa782a589884ce}} 
+int \mbox{\hyperlink{testpalindrome_8c_aff6b4a023a3e175730aa782a589884ce}{clean\+\_\+suite\+\_\+print\+\_\+palindromes}} (void)
+\begin{DoxyCompactList}\small\item\em Функция для очистки Suite функции print\+\_\+palindromes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a4bad0b0ed0a2f798cec106d1275832d5}\label{testpalindrome_8c_a4bad0b0ed0a2f798cec106d1275832d5}} 
+int \mbox{\hyperlink{testpalindrome_8c_a4bad0b0ed0a2f798cec106d1275832d5}{init\+\_\+suite\+\_\+is\+\_\+palindrome}} (void)
+\begin{DoxyCompactList}\small\item\em Функция для инициализации Suite функции is\+\_\+palindrome. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a4d7e326a747318c407107ad38d50dcee}\label{testpalindrome_8c_a4d7e326a747318c407107ad38d50dcee}} 
+int \mbox{\hyperlink{testpalindrome_8c_a4d7e326a747318c407107ad38d50dcee}{clean\+\_\+suite\+\_\+is\+\_\+palindrome}} (void)
+\begin{DoxyCompactList}\small\item\em Функция для очистки Suite функции is\+\_\+palindrome. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_addc90a1b72a785a3af6f7f7f5d8796d9}\label{testpalindrome_8c_addc90a1b72a785a3af6f7f7f5d8796d9}} 
+int \mbox{\hyperlink{testpalindrome_8c_addc90a1b72a785a3af6f7f7f5d8796d9}{init\+\_\+suite\+\_\+get\+\_\+flags}} (void)
+\begin{DoxyCompactList}\small\item\em Функция для инициализации Suite функции get\+\_\+palindrome\+\_\+flags. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a5f8bef2c36fa9d71056339c6eef96f11}\label{testpalindrome_8c_a5f8bef2c36fa9d71056339c6eef96f11}} 
+int \mbox{\hyperlink{testpalindrome_8c_a5f8bef2c36fa9d71056339c6eef96f11}{clean\+\_\+suite\+\_\+get\+\_\+flags}} (void)
+\begin{DoxyCompactList}\small\item\em Функция для очистки Suite функции get\+\_\+palindrome\+\_\+flags. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a42bf3125d6e7a55dae2780d18211b942}\label{testpalindrome_8c_a42bf3125d6e7a55dae2780d18211b942}} 
+void \mbox{\hyperlink{testpalindrome_8c_a42bf3125d6e7a55dae2780d18211b942}{is\+\_\+palindrome\+\_\+true\+\_\+zero}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай is\+\_\+palindrome с проверкой числа 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a05506d5349a0fb5cebd9e62f364510e6}\label{testpalindrome_8c_a05506d5349a0fb5cebd9e62f364510e6}} 
+void \mbox{\hyperlink{testpalindrome_8c_a05506d5349a0fb5cebd9e62f364510e6}{is\+\_\+palindrome\+\_\+true\+\_\+one}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай is\+\_\+palindrome с проверкой числа, состоящего из одной цифры \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a2399def1785324f91540bcba7cbe724a}\label{testpalindrome_8c_a2399def1785324f91540bcba7cbe724a}} 
+void \mbox{\hyperlink{testpalindrome_8c_a2399def1785324f91540bcba7cbe724a}{is\+\_\+palindrome\+\_\+true\+\_\+odd}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай is\+\_\+palindrome с проверкой числа-\/палиндрома, длина которого нечетна \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a0c5cf818f16c47473eaea8b0d03ee832}\label{testpalindrome_8c_a0c5cf818f16c47473eaea8b0d03ee832}} 
+void \mbox{\hyperlink{testpalindrome_8c_a0c5cf818f16c47473eaea8b0d03ee832}{is\+\_\+palindrome\+\_\+true\+\_\+even}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай is\+\_\+palindrome с проверкой числа-\/палиндрома, длина которого четна \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a89cc35f009dfd4450b7b3f748489542a}\label{testpalindrome_8c_a89cc35f009dfd4450b7b3f748489542a}} 
+void \mbox{\hyperlink{testpalindrome_8c_a89cc35f009dfd4450b7b3f748489542a}{is\+\_\+palindrome\+\_\+false\+\_\+odd}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай is\+\_\+palindrome с проверкой числа-\/не\+\_\+палиндрома, длина которого нечетна \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_aa174ba11a0da310d75b5934caaef39e8}\label{testpalindrome_8c_aa174ba11a0da310d75b5934caaef39e8}} 
+void \mbox{\hyperlink{testpalindrome_8c_aa174ba11a0da310d75b5934caaef39e8}{is\+\_\+palindrome\+\_\+false\+\_\+even}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай is\+\_\+palindrome с проверкой числа-\/не\+\_\+палиндрома, длина которого четна \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_afaf41bd1bc446c77cd9b7a08066d8200}\label{testpalindrome_8c_afaf41bd1bc446c77cd9b7a08066d8200}} 
+void \mbox{\hyperlink{testpalindrome_8c_afaf41bd1bc446c77cd9b7a08066d8200}{print\+\_\+palindromes\+\_\+error\+\_\+noflag}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай print\+\_\+palindromes при отсутствии чисел-\/палиндромов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_ad5c08c4d73cfe8b4ee40f0b1156f5a2c}\label{testpalindrome_8c_ad5c08c4d73cfe8b4ee40f0b1156f5a2c}} 
+void \mbox{\hyperlink{testpalindrome_8c_ad5c08c4d73cfe8b4ee40f0b1156f5a2c}{print\+\_\+palindromes\+\_\+success\+\_\+oneflag}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай print\+\_\+palindromes при наличии чисел-\/палиндромов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_ac26484eed3c7ed77f8401264f070e121}\label{testpalindrome_8c_ac26484eed3c7ed77f8401264f070e121}} 
+void \mbox{\hyperlink{testpalindrome_8c_ac26484eed3c7ed77f8401264f070e121}{get\+\_\+flags\+\_\+allfalse\+\_\+nopali}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай get\+\_\+palindrome\+\_\+flags при отсутствии палиндромов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_ab21936fc214a5dbcf68b3afac79cbd41}\label{testpalindrome_8c_ab21936fc214a5dbcf68b3afac79cbd41}} 
+void \mbox{\hyperlink{testpalindrome_8c_ab21936fc214a5dbcf68b3afac79cbd41}{get\+\_\+flags\+\_\+onetrue\+\_\+onepali}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай get\+\_\+palindrome\+\_\+flags при наличии одного палиндрома \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a3e5d424e7b6ec3b2c17325ae8d11381c}\label{testpalindrome_8c_a3e5d424e7b6ec3b2c17325ae8d11381c}} 
+void \mbox{\hyperlink{testpalindrome_8c_a3e5d424e7b6ec3b2c17325ae8d11381c}{get\+\_\+flags\+\_\+alltrue\+\_\+allpali}} (void)
+\begin{DoxyCompactList}\small\item\em Тестовый случай get\+\_\+palindrome\+\_\+flags при наличии всех палиндромов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{testpalindrome_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{testpalindrome_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Файл с модульным тестированием \mbox{\hyperlink{palindrome_8c}{palindrome.\+c}}. 
+

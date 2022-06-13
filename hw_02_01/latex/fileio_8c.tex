@@ -1,0 +1,59 @@
+\hypertarget{fileio_8c}{}\doxysection{Файл fileio.\+c}
+\label{fileio_8c}\index{fileio.c@{fileio.c}}
+
+
+Файл с описанием функций для работы с входным файлом целых чисел  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fileio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для fileio.\+c\+:
+% FIG 0
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fileio_8c_ad222baf9301d2d35a5c928a0d91c4335}\label{fileio_8c_ad222baf9301d2d35a5c928a0d91c4335}} 
+\#define {\bfseries R\+E\+A\+D\+\_\+\+C\+O\+U\+NT}~1
+\item 
+\mbox{\Hypertarget{fileio_8c_ae14eaaed1fe7cdf491da54a714c426b3}\label{fileio_8c_ae14eaaed1fe7cdf491da54a714c426b3}} 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+O\+U\+NT}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fileio_8c_a4c287b40ab468d4131e5c59373430408}{read\+\_\+array}} (F\+I\+LE $\ast$const f, uint32\+\_\+t $\ast$numbers, size\+\_\+t $\ast$const length)
+\begin{DoxyCompactList}\small\item\em Функция для считывания массива целых чисел из текстового файла \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Файл с описанием функций для работы с входным файлом целых чисел 
+
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{fileio_8c_a4c287b40ab468d4131e5c59373430408}\label{fileio_8c_a4c287b40ab468d4131e5c59373430408}} 
+\index{fileio.c@{fileio.c}!read\_array@{read\_array}}
+\index{read\_array@{read\_array}!fileio.c@{fileio.c}}
+\doxysubsubsection{\texorpdfstring{read\_array()}{read\_array()}}
+{\footnotesize\ttfamily int read\+\_\+array (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$const}]{f,  }\item[{uint32\+\_\+t $\ast$}]{numbers,  }\item[{size\+\_\+t $\ast$const}]{length }\end{DoxyParamCaption})}
+
+
+
+Функция для считывания массива целых чисел из текстового файла 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em f} & Файловая переменная (текстовый файл) \\
+\hline
+\mbox{\texttt{ out}}  & {\em numbers} & Массив целых беззнаковых чисел \\
+\hline
+\mbox{\texttt{ out}}  & {\em length} & Количество элементов массива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Код возврата (0 -\/ успех, E\+R\+R\+\_\+\+D\+A\+TA -\/ ошибка) 
+\end{DoxyReturn}

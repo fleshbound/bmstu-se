@@ -1,0 +1,76 @@
+\hypertarget{main_8c}{}\doxysection{Файл main.\+c}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+Основной файл с решением задачи  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fileio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}palindrome.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для main.\+c\+:
+% FIG 0
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_ae14eaaed1fe7cdf491da54a714c426b3}\label{main_8c_ae14eaaed1fe7cdf491da54a714c426b3}} 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+O\+U\+NT}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a24fb20d24c6e90401b02763cd1b74206}{check\+\_\+file}} (F\+I\+LE $\ast$const f)
+\begin{DoxyCompactList}\small\item\em Функция проверки файловой переменной \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_ad6872bbf1e8779ee6b0c4ad5a0428959}{check\+\_\+argc}} (const int argc)
+\begin{DoxyCompactList}\small\item\em Функция проверки количества аргументов командной строки \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной файл с решением задачи 
+
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{main_8c_ad6872bbf1e8779ee6b0c4ad5a0428959}\label{main_8c_ad6872bbf1e8779ee6b0c4ad5a0428959}} 
+\index{main.c@{main.c}!check\_argc@{check\_argc}}
+\index{check\_argc@{check\_argc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{check\_argc()}{check\_argc()}}
+{\footnotesize\ttfamily int check\+\_\+argc (\begin{DoxyParamCaption}\item[{const int}]{argc }\end{DoxyParamCaption})}
+
+
+
+Функция проверки количества аргументов командной строки 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em argc} & Количество аргументов командной строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Код возврата (0 -\/ успех, E\+R\+R\+\_\+\+A\+R\+GC -\/ неудача) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a24fb20d24c6e90401b02763cd1b74206}\label{main_8c_a24fb20d24c6e90401b02763cd1b74206}} 
+\index{main.c@{main.c}!check\_file@{check\_file}}
+\index{check\_file@{check\_file}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{check\_file()}{check\_file()}}
+{\footnotesize\ttfamily int check\+\_\+file (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$const}]{f }\end{DoxyParamCaption})}
+
+
+
+Функция проверки файловой переменной 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em f} & Файловая переменная \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Код возврата (0 -\/ успех, E\+R\+R\+\_\+\+IO -\/ ошибка) 
+\end{DoxyReturn}

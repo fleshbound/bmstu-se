@@ -1,0 +1,112 @@
+\hypertarget{palindrome_8c}{}\doxysection{Файл palindrome.\+c}
+\label{palindrome_8c}\index{palindrome.c@{palindrome.c}}
+
+
+Файл с описанием функций для анализа массива целых чисел, направленного на выявление и вывод палиндромов.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+C\+Unit.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}palindrome.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для palindrome.\+c\+:
+% FIG 0
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{palindrome_8c_aa8cecfc5c5c054d2875c03e77b7be15d}\label{palindrome_8c_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\#define {\bfseries T\+R\+UE}~1
+\item 
+\mbox{\Hypertarget{palindrome_8c_aa93f0eb578d23995850d61f7d61c55c1}\label{palindrome_8c_aa93f0eb578d23995850d61f7d61c55c1}} 
+\#define {\bfseries F\+A\+L\+SE}~0
+\item 
+\mbox{\Hypertarget{palindrome_8c_ae14eaaed1fe7cdf491da54a714c426b3}\label{palindrome_8c_ae14eaaed1fe7cdf491da54a714c426b3}} 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+O\+U\+NT}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{palindrome_8c_af9e3ffb3d1b849082051f77d11a82a0b}{is\+\_\+palindrome}} (const uint32\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em Функция для определения, является ли переданное число палиндромом \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{palindrome_8c_a3d0b44199eec2b4bf1d6d6a0818ca529}{get\+\_\+palindrome\+\_\+flags}} (uint32\+\_\+t $\ast$numbers, const size\+\_\+t length, size\+\_\+t $\ast$flags)
+\begin{DoxyCompactList}\small\item\em Функция для анализа массива целых чисел для выявления палиндромов \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{palindrome_8c_aa85d104ed44ad5c6af0052bfdd379f50}{print\+\_\+palindromes}} (F\+I\+LE $\ast$const f, F\+I\+LE $\ast$const f\+\_\+err, uint32\+\_\+t $\ast$numbers, const size\+\_\+t length, size\+\_\+t $\ast$const flags)
+\begin{DoxyCompactList}\small\item\em Функция для вывода в файл палиндромов, содержащихся в массиве \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Файл с описанием функций для анализа массива целых чисел, направленного на выявление и вывод палиндромов. 
+
+Данный файл содержит в себе определения основных функций, пред-\/ назначенных для анализа массива целых чисел с использованием ма-\/ ссива флагов для хранения информации о палиндромах. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{palindrome_8c_a3d0b44199eec2b4bf1d6d6a0818ca529}\label{palindrome_8c_a3d0b44199eec2b4bf1d6d6a0818ca529}} 
+\index{palindrome.c@{palindrome.c}!get\_palindrome\_flags@{get\_palindrome\_flags}}
+\index{get\_palindrome\_flags@{get\_palindrome\_flags}!palindrome.c@{palindrome.c}}
+\doxysubsubsection{\texorpdfstring{get\_palindrome\_flags()}{get\_palindrome\_flags()}}
+{\footnotesize\ttfamily void get\+\_\+palindrome\+\_\+flags (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{numbers,  }\item[{const size\+\_\+t}]{length,  }\item[{size\+\_\+t $\ast$}]{flags }\end{DoxyParamCaption})}
+
+
+
+Функция для анализа массива целых чисел для выявления палиндромов 
+
+Функция проверяет каждый элемент переданного массива чисел на соответствие форме палиндрома и записывает полученный признак в переданном массиве флагов.
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em numbers} & Массив целых беззнаковых чисел \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Количество элементов массива \\
+\hline
+\mbox{\texttt{ out}}  & {\em flags} & Массив флагов \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{palindrome_8c_af9e3ffb3d1b849082051f77d11a82a0b}\label{palindrome_8c_af9e3ffb3d1b849082051f77d11a82a0b}} 
+\index{palindrome.c@{palindrome.c}!is\_palindrome@{is\_palindrome}}
+\index{is\_palindrome@{is\_palindrome}!palindrome.c@{palindrome.c}}
+\doxysubsubsection{\texorpdfstring{is\_palindrome()}{is\_palindrome()}}
+{\footnotesize\ttfamily int is\+\_\+palindrome (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{number }\end{DoxyParamCaption})}
+
+
+
+Функция для определения, является ли переданное число палиндромом 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em number} & Анализируемое число \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Признак (истина или ложь) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{palindrome_8c_aa85d104ed44ad5c6af0052bfdd379f50}\label{palindrome_8c_aa85d104ed44ad5c6af0052bfdd379f50}} 
+\index{palindrome.c@{palindrome.c}!print\_palindromes@{print\_palindromes}}
+\index{print\_palindromes@{print\_palindromes}!palindrome.c@{palindrome.c}}
+\doxysubsubsection{\texorpdfstring{print\_palindromes()}{print\_palindromes()}}
+{\footnotesize\ttfamily int print\+\_\+palindromes (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$const}]{f,  }\item[{F\+I\+LE $\ast$const}]{f\+\_\+err,  }\item[{uint32\+\_\+t $\ast$}]{numbers,  }\item[{const size\+\_\+t}]{length,  }\item[{size\+\_\+t $\ast$const}]{flags }\end{DoxyParamCaption})}
+
+
+
+Функция для вывода в файл палиндромов, содержащихся в массиве 
+
+Функция выводит в передаваемый поток выхода палиндромы, содержащиеся в массиве, используя для этого информацию из массива флагов. В случае отсутствия палиндромов в массиве функция выводит сообщение об ошибке в передаваемый поток ошибок.
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em f} & Поток выхода \\
+\hline
+\mbox{\texttt{ in}}  & {\em f\+\_\+err} & Поток ошибок \\
+\hline
+\mbox{\texttt{ in}}  & {\em numbers} & Массив целых беззнаковых чисел \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Количество элементов массива \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & Массив флагов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Код возврата (0 -\/ успех, E\+R\+R\+\_\+\+N\+O\+\_\+\+A\+N\+S\+W\+ER -\/ неудача) 
+\end{DoxyReturn}
